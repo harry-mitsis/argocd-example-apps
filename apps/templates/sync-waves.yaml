@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sync-wavez3
+  name: sync-wavez3sadsada
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
