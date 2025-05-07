@@ -2,7 +2,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generateName: upgrade-sql-schema
+  generateName: upgrade-sql-schemaz
   annotations:
     helm.sh/hook: pre-install
     helm.sh/hook-weight: "-2"
@@ -10,7 +10,7 @@ spec:
   template:
     spec:
       containers:
-        - name: upgrade-sql-schema
+        - name: upgrade-sql-schemaz
           image: alpine:latest
           command: ["sleep", "5"]
       restartPolicy: Never
@@ -36,7 +36,7 @@ spec:
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: frontend
+  name: frontendz
 spec:
   replicas: 24
   selector:
@@ -54,12 +54,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend
+  name: frontendz
   annotations:
     helm.sh/hook-weight: "2"
 spec:
   selector:
-    tier: frontend
+    tier: frontendz
   ports:
     - protocol: TCP
       port: 80
