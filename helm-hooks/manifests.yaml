@@ -38,7 +38,7 @@ kind: ReplicaSet
 metadata:
   name: frontendz
 spec:
-  replicas: 25
+  replicas: 225
   selector:
     matchLabels:
       tier: frontend
